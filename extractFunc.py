@@ -157,22 +157,3 @@ class ExtractFuncs(object):
 					return r[j]
 		return None
 
-	'''
-	def _getFuncName(self):
-		for func in self.funcs:
-			for i in range(func[0], func[1]):
-				r = self.file[i]
-				if '(' in r:
-					r = r.split('(')
-					fn = r[0]
-					fn = fn.split()
-					self.funcsname.append(fn[-1])
-					break
-	'''
-
-if __name__ == '__main__':
-	e = ExtractFuncs()
-	e.findFuncs('/home/kali/oliver/DataHandling/testdata/2132/2132-O0/2132-O0-decompile/2132-O0-Hex-Rays-8.0.0.220729/2132-O0-Hex-Rays-8.0.0.220729.txt')
-#	e.findFuncs('../ds2/coreutils/src/copy.c')
-	e.writeFuncs()
-
